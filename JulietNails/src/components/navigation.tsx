@@ -42,9 +42,12 @@ const mobileLinkVariants = {
 const Navigation = () => {
   const [links, setLinks] = useState<JSX.Element[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [sections, setSections] = useState<NodeListOf<HTMLElement> | null>(
+    null
+  );
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
+    if (!sections) return;
     const newLinks = Array.from(sections).map((section, index) => {
       const sectionID = section.id;
       const sectionTitle = section.dataset.title;
@@ -67,6 +70,10 @@ const Navigation = () => {
       );
     });
     setLinks(newLinks);
+  }, [sections]);
+
+  useEffect(() => {
+    setSections(document.querySelectorAll("section"));
   }, []);
 
   return (
