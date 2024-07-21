@@ -2,11 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 90px 0;
 }
 
 .aboutme-container {
   display: flex;
-  padding: 20px 60px;
+  padding: 0 60px;
   max-width: 1200px;
   font-family: Arial, sans-serif;
   align-items: center;
