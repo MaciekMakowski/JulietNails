@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+@import url("navigations.css");
+:root {
+  --text-color-mian: #000;
+  --text-color-secondary: #fff;
+  --color-secondary: #ffa8ec;
+  --color-primary: #ffe4f9;
+  --allura-font: "Allura", cursive;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}

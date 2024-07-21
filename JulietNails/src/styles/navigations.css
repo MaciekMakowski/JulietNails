@@ -1,0 +1,95 @@
+nav {
+  width: 100%;
+  display: flex;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary);
+  font-family: var(--allura-font);
+}
+
+nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.4rem;
+}
+nav .logo a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+nav .menu-toggle {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+nav .menu-toggle div {
+  width: 30px;
+  height: 3px;
+  background-color: var(--text-color-mian);
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+nav .nav-links.mobile {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  padding: 1rem;
+}
+
+nav .nav-links.desktop {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  nav .menu-toggle {
+    display: block;
+  }
+
+  nav .nav-links.desktop {
+    display: none;
+  }
+
+  nav .nav-links.mobile {
+    display: flex;
+  }
+  nav .nav-links {
+    box-sizing: border-box;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  nav .nav-links a {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  nav .nav-links a:hover {
+    background-color: var(--color-secondary);
+    color: var(--text-color-secondary);
+  }
+  nav .menu-toggle.active ~ .nav-links {
+    display: flex;
+  }
+}
