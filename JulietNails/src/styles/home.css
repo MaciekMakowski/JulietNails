@@ -10,6 +10,10 @@
   position: relative;
   overflow: hidden;
   min-height: 600px;
+  background-image: url("../images/Stars.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #home .welcome-text {

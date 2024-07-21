@@ -73,7 +73,7 @@ const Navigation = () => {
     <motion.nav className="navigation">
       <div className="logo">
         <a href="/">
-          <h1 className="primary-font">JulietNails</h1>
+          <h1 className="primary-font">JvlietNails</h1>
         </a>
       </div>
       <button
