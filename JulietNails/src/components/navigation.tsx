@@ -52,7 +52,7 @@ const Navigation = () => {
         <motion.a
           href={`#${sectionID}`}
           key={sectionID}
-          className="nav-link"
+          className="nav-link primary-font"
           initial="hidden"
           animate="visible"
           exit="exit"
@@ -73,7 +73,7 @@ const Navigation = () => {
     <motion.nav className="navigation">
       <div className="logo">
         <a href="/">
-          <h1>JulietNails</h1>
+          <h1 className="primary-font">JulietNails</h1>
         </a>
       </div>
       <button
@@ -103,7 +103,7 @@ const Navigation = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className={`nav-links desktop`}>{links}</div>
+      <div className={`nav-links desktop primary-font`}>{links}</div>
     </motion.nav>
   );
 };
