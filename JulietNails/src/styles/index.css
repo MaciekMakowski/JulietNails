@@ -3,6 +3,7 @@
 @import url("home.css");
 @import url("aboutme.css");
 @import url("stylizations.css");
+@import url("technics.css");
 :root {
   --text-color-mian: #000;
   --text-color-secondary: #fff;

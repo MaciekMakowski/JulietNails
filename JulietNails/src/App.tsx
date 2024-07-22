@@ -5,6 +5,7 @@ import AboutMe from "./components/aboutme";
 import Home from "./components/home";
 import Navigation from "./components/navigation";
 import Stylizations from "./components/stylizations";
+import Technics from "./components/technics";
 import "./styles/index.css";
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Home />
           <AboutMe />
           <Stylizations />
-          <section id="technics" data-title="Techniki"></section>
+          <Technics />
           <section id="courses" data-title="Szkolenia"></section>
         </main>
       </AnimatePresence>

@@ -59,6 +59,9 @@ nav .nav-links.desktop {
 }
 
 @media (max-width: 768px) {
+  nav {
+    width: 100vw;
+  }
   nav .menu-toggle {
     display: block;
   }

@@ -4,6 +4,7 @@
   align-items: center;
   padding: 90px 0;
   position: relative;
+  overflow: hidden;
 }
 
 #stylizations .stylizations-container {
@@ -84,9 +85,11 @@
 
 @media (max-width: 768px) {
   #stylizations .stylizations-gallery {
-    grid-template-columns: repeat(1, 225px) !important;
-    justify-content: start;
-    margin-left: 5%;
+    display: flex;
+    grid-template-columns: none !important;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
   }
   #stylizations .stylizations-gallery .stylization {
     width: 300px;
