@@ -46,6 +46,12 @@ const Navigation = () => {
     null
   );
 
+  const handleScroll = (sectionId: string) => {
+    setIsOpen(false);
+    const offSet = document.getElementById(sectionId)?.offsetTop;
+    window.scrollTo(offSet ? offSet : 0, 0);
+  };
+
   useEffect(() => {
     if (!sections) return;
     const newLinks = Array.from(sections).map((section, index) => {
@@ -64,7 +70,7 @@ const Navigation = () => {
           tabIndex={index}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => setIsOpen(false)}
+          onClick={() => handleScroll(sectionID)}
         >
           {sectionTitle}
         </motion.a>
