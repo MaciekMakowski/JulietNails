@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 const linkVariants = {
   hidden: {
@@ -46,34 +47,34 @@ const Navigation = () => {
     null
   );
 
-  const handleScroll = (sectionId: string) => {
-    setIsOpen(false);
-    const offSet = document.getElementById(sectionId)?.offsetTop;
-    window.scrollTo(offSet ? offSet : 0, 0);
-  };
-
   useEffect(() => {
     if (!sections) return;
     const newLinks = Array.from(sections).map((section, index) => {
       const sectionID = section.id;
       const sectionTitle = section.dataset.title;
       return (
-        <motion.a
-          href={`#${sectionID}`}
-          key={sectionID}
-          className="nav-link primary-font"
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           initial="hidden"
           animate="visible"
           exit="exit"
-          variants={window.innerWidth < 768 ? mobileLinkVariants : linkVariants}
           custom={index}
           tabIndex={index}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => handleScroll(sectionID)}
+          variants={window.innerWidth < 768 ? mobileLinkVariants : linkVariants}
+          key={sectionID}
+          className="nav-link"
         >
-          {sectionTitle}
-        </motion.a>
+          <ScrollLink
+            to={sectionID}
+            smooth={true}
+            duration={500}
+            className="primary-font scroll-link"
+            onClick={() => setIsOpen(false)} // Zamknięcie menu po kliknięciu
+          >
+            {sectionTitle}
+          </ScrollLink>
+        </motion.div>
       );
     });
     setLinks(newLinks);
