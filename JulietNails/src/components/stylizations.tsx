@@ -33,7 +33,7 @@ const Stylizations = () => {
 
     return stylizationsPages.map((page, index) => {
       const { ref, inView } = useInView({
-        threshold: 0.5,
+        threshold: [0.1, 0.5, 1],
         triggerOnce: true,
       });
 

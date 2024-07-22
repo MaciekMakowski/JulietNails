@@ -72,7 +72,7 @@
 
 @media (max-width: 1024px) {
   #stylizations .stylizations-gallery {
-    grid-template-columns: repeat(2, minmax(200px, 1fr)) !important;
+    grid-template-columns: repeat(2, 225px) !important;
     justify-content: center;
     align-items: center;
   }
@@ -84,11 +84,9 @@
 
 @media (max-width: 768px) {
   #stylizations .stylizations-gallery {
-    display: flex !important;
-    gap: 4rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(1, 225px) !important;
+    justify-content: start;
+    margin-left: 5%;
   }
   #stylizations .stylizations-gallery .stylization {
     width: 300px;
