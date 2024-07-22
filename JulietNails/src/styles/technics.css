@@ -45,6 +45,7 @@
   box-sizing: border-box;
   padding: 1rem;
   box-shadow: 0 0px 5px 5px var(--background-light);
+  z-index: 2;
 }
 #technics .technic-item:first-child {
   border-radius: 20px 20px 0 0;
@@ -83,8 +84,8 @@
   left: 0;
   width: 18%;
   height: auto;
+  z-index: 0;
 }
-
 #technics .technics-image-rb-container {
   position: absolute;
   bottom: 20px;
@@ -96,6 +97,15 @@
   position: relative;
   width: 100%;
   height: auto;
+}
+@media (max-width: 1024px) {
+  #technics .technic-item img {
+    width: 300px;
+    height: 150px;
+  }
+  #technics .technics-image-lb-container {
+    width: 5%;
+  }
 }
 
 @media (max-width: 768px) {

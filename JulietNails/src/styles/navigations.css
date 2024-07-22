@@ -84,15 +84,11 @@ nav .nav-links.desktop {
     background-color: var(--color-primary);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    gap: 2rem;
   }
   nav .nav-links .scroll-link {
-    padding: 1rem;
     width: 100%;
     text-align: center;
-  }
-  nav .nav-links .scroll-link:hover {
-    background-color: var(--color-secondary);
-    color: var(--text-color-secondary);
   }
   nav .menu-toggle.active ~ .nav-links {
     display: flex;
